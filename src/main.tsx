@@ -3,7 +3,7 @@ import {createRoot} from 'react-dom/client';
 import {seal, unb64} from './crypto.js';
 import './style.css';
 
-function App() {
+function App() { 
   const [endpoint,setEndpoint] = useState('http://127.0.0.1:8787');
   const [pem,setPem] = useState('');
   const [password,setPassword] = useState('');
