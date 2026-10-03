@@ -1,0 +1,11 @@
+secrets/
+node_modules/
+dist/
+bin/
+obj/
+.venv/
+__pycache__/
+*.pyc
+config.json
+cloudflare/config.yml
+.local-demo/
