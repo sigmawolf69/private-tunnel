@@ -13,3 +13,6 @@ The workflow derives the asset base path from the GitHub Pages configuration. Fo
 Select your public.pem manually in the deployed UI and use the HTTPS API tunnel URL. Set the gateway config.json origin to the deployed UI origin, without the repository path. Keep all private secrets outside this UI repository.
 
 Run npm run typecheck for TypeScript validation. The backend integration tests belong to the separate gateway project; this UI repository does not reference ../tests. A successful local build does not change GitHub Pages settings or push your changes.
+
+
+The UI now opens Comfy Studio after login. Restart the updated Python gateway and run the Comfy API on port 8000 before testing. See COMFY-INTEGRATION.md. The .NET gateway does not yet support studio sessions.

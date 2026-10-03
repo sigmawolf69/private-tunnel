@@ -1,10 +1,13 @@
+import tailwindcss from '@tailwindcss/vite';
+import {fileURLToPath} from 'node:url';
 import {defineConfig} from 'vite';
 import {readFileSync} from 'node:fs';
 import {resolve} from 'node:path';
 
 export default defineConfig({
+  resolve: {alias: {'@': fileURLToPath(new URL('./src/studio', import.meta.url))}},
   server: {fs: {deny: ['.env', '.env.*', '*.{crt,pem}', '**/.git/**', '**/secrets/**', '**/.local-demo/**']}},
-  plugins:[{
+  plugins:[tailwindcss(), {
   name:'local-demo-public-key', apply:'serve',
   configureServer(server) {
     const root=process.env.LOCAL_DEMO_ROOT;
